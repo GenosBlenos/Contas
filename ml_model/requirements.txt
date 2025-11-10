@@ -1,0 +1,14 @@
+easyocr
+scikit-learn
+pandas
+joblib
+flask
+PyMuPDF
+pillow
+nltk
+pypdf
+numpy
+opencv-python-headless
+pytesseract
+pdf2image
+pdfplumber

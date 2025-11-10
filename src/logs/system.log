@@ -1,0 +1,265 @@
+2025-10-21 19:46:06 | Envio para classificação | Arquivo: SegundaViaConta (18).pdf
+2025-10-21 19:46:07 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-21 19:46:07 | Sucesso | Fatura de Água inserida com ID: 17
+2025-10-22 13:09:36 | Envio para classificação | Arquivo: SegundaViaConta (16).pdf
+2025-10-22 13:09:37 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 13:09:37 | Sucesso | Fatura de Água inserida com ID: 18
+2025-10-22 14:47:45 | Envio para classificação | Arquivo: SegundaViaConta (11).pdf
+2025-10-22 14:47:47 | Erro cURL | Failed to connect to localhost port 5001 after 2248 ms: Couldn't connect to server
+2025-10-22 14:49:59 | Envio para classificação | Arquivo: SegundaViaConta (11).pdf
+2025-10-22 14:50:00 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 14:50:00 | Sucesso | Fatura de Água inserida com ID: 19
+2025-10-22 14:51:31 | Envio para classificação | Arquivo: SegundaViaConta (15).pdf
+2025-10-22 14:51:31 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 14:51:31 | Sucesso | Fatura de Água inserida com ID: 20
+2025-10-22 15:07:42 | Envio para classificação | Arquivo: 25150542939.pdf
+2025-10-22 15:07:55 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 15:07:55 | Erro Exceção DB | Exceção: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compras.semparar' doesn't exist
+2025-10-22 16:32:29 | Envio para classificação | Arquivo: SegundaViaConta (16).pdf
+2025-10-22 16:32:30 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 16:32:30 | Sucesso | Fatura de Água inserida com ID: 21
+2025-10-22 17:28:41 | Envio para classificação | Arquivo: 25150542939.pdf
+2025-10-22 17:28:54 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 17:28:54 | Erro Exceção DB | Exceção: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compras.semparar' doesn't exist
+2025-10-22 17:29:06 | Envio para classificação | Arquivo: SegundaViaConta (17).pdf
+2025-10-22 17:29:06 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 17:29:06 | Sucesso | Fatura de Água inserida com ID: 22
+2025-10-22 17:38:56 | Envio para classificação | Arquivo: SegundaViaConta (5).pdf
+2025-10-22 17:38:56 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 17:38:56 | Sucesso | Fatura de Água inserida com ID: 23
+2025-10-22 17:53:02 | Envio para classificação | Arquivo: SegundaViaConta (17).pdf
+2025-10-22 17:53:03 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-22 17:53:03 | Sucesso | Fatura de Água inserida com ID: 24
+2025-10-22 18:48:27 | Falha upload | Erro ao mover o arquivo para uploads/
+2025-10-23 13:16:26 | Envio para classificação | Arquivo: SegundaViaConta (18).pdf
+2025-10-23 13:16:29 | Erro cURL | Failed to connect to localhost port 5001 after 2241 ms: Couldn't connect to server
+2025-10-23 13:18:35 | Envio para classificação | Arquivo: SegundaViaConta (3).pdf
+2025-10-23 13:18:36 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 13:18:36 | Sucesso | Fatura de Água inserida com ID: 25
+2025-10-23 13:18:57 | Envio para classificação | Arquivo: 25150542939.pdf
+2025-10-23 13:19:10 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 13:19:10 | Erro Exceção DB | Exceção: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compras.semparar' doesn't exist
+2025-10-23 13:19:54 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+2025-10-23 13:19:54 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 13:19:54 | Sucesso | Fatura de Energia Elétrica inserida com ID: 1
+2025-10-23 13:33:40 | Envio para classificação | Arquivo: SegundaViaConta (16).pdf
+2025-10-23 13:33:40 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 13:33:40 | Sucesso | Fatura de Água inserida com ID: 26
+2025-10-23 14:17:08 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+2025-10-23 14:17:08 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 14:17:08 | Sucesso | Fatura de Energia Elétrica inserida com ID: 2
+2025-10-23 15:01:38 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+2025-10-23 15:01:39 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 15:01:39 | Sucesso | Fatura de Energia Elétrica inserida com ID: 3
+2025-10-23 15:47:36 | Envio para classificação | Arquivo: 2020235445 - CEMUS IV - CENTRO.pdf
+2025-10-23 15:47:36 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 15:47:36 | Sucesso | Fatura de Energia Elétrica inserida com ID: 4
+2025-10-23 17:30:55 | Envio para classificação | Arquivo: 2020201354 - MUSEU MUNICIPAL.pdf
+2025-10-23 17:30:55 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 17:30:55 | Sucesso | Fatura de Energia Elétrica inserida com ID: 5
+2025-10-23 17:31:51 | Envio para classificação | Arquivo: 2002575531 - CEMITÉRIO DA SAUDADE.pdf
+2025-10-23 17:31:51 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 17:31:51 | Sucesso | Fatura de Energia Elétrica inserida com ID: 6
+2025-10-23 18:59:04 | Envio para classificação | Arquivo: 2020201338 - TEATRO VERDI.pdf
+2025-10-23 18:59:05 | Erro API | HTTP: 400 | Resposta: {
+  "error": "Campo 'conta_mes' n\u00e3o encontrado ou vazio para a fatura de energia: upload_68fa7af895d906.49261875.pdf",
+  "status": "validation_failed"
+}
+
+2025-10-23 19:08:37 | Envio para classificação | Arquivo: 2020201362 - AUDITÓRIO MAESTRO GAÓ.pdf
+2025-10-23 19:08:38 | Erro API | HTTP: 400 | Resposta: {
+  "error": "Campo 'conta_mes' n\u00e3o encontrado ou vazio para a fatura de energia: upload_68fa7d3594cfc3.76416924.pdf",
+  "status": "validation_failed"
+}
+
+2025-10-23 19:26:50 | Envio para classificação | Arquivo: 2020201338 - TEATRO VERDI.pdf
+2025-10-23 19:26:51 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-23 19:26:51 | Sucesso | Fatura de Energia Elétrica inserida com ID: 7
+2025-10-24 12:08:27 | Envio para classificação | Arquivo: 2020201362 - AUDITÓRIO MAESTRO GAÓ.pdf
+2025-10-24 12:08:29 | Erro cURL | Failed to connect to localhost port 5001 after 2248 ms: Couldn't connect to server
+2025-10-24 12:09:44 | Envio para classificação | Arquivo: 2020201362 - AUDITÓRIO MAESTRO GAÓ.pdf
+2025-10-24 12:09:45 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-24 12:09:45 | Sucesso | Fatura de Energia Elétrica inserida com ID: 8
+2025-10-24 12:55:26 | Envio para classificação | Arquivo: 2002575531 - CEMITÉRIO DA SAUDADE.pdf
+2025-10-24 12:55:27 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-24 12:55:27 | Sucesso | Fatura de Energia Elétrica inserida com ID: 9
+2025-10-24 16:42:28 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+2025-10-24 16:42:28 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-24 16:42:28 | Sucesso | Fatura de Energia Elétrica inserida com ID: 10
+2025-10-24 17:11:12 | Envio para classificação | Arquivo: 2020242182 - PRAÇA SÃO BENEDITO - DIV. LAMP..pdf
+2025-10-24 17:11:12 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-24 17:11:12 | Sucesso | Fatura de Energia Elétrica inserida com ID: 11
+2025-10-24 17:43:25 | Envio para classificação | Arquivo: 2020201362 - AUDITÓRIO MAESTRO GAÓ.pdf
+2025-10-24 17:43:26 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-24 17:43:26 | Sucesso | Fatura de Energia Elétrica inserida com ID: 12
+2025-10-24 18:08:55 | Envio para classificação | Arquivo: 25150542939.pdf
+2025-10-24 18:09:08 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-24 18:09:08 | Erro Exceção DB | Exceção: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compras.semparar' doesn't exist
+2025-10-24 18:12:13 | Fatal Exception | Undefined constant "ML_API_URL" in C:\wamp64\www\compras\public\processa_pdf.php on line 56
+2025-10-24 18:14:31 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-24 18:42:34 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-24 18:45:30 | Envio para classificação | Arquivo: 2020201427 - DIV. CAP. LÂMPADAS.pdf
+2025-10-24 18:46:05 | Envio para classificação | Arquivo: 2002747120 - CRAS - JD. INDEPENDÊNCIA.pdf
+2025-10-24 18:47:11 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-24 18:49:25 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+2025-10-24 18:49:46 | Envio para classificação | Arquivo: 2020201311 - CONSERVATÓRIO MUNICIPAL.pdf
+2025-10-24 18:54:00 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-24 19:00:20 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-24 19:00:45 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-24 19:01:10 | Envio para classificação | Arquivo: 2020201311 - CONSERVATÓRIO MUNICIPAL.pdf
+2025-10-24 19:02:04 | Envio para classificação | Arquivo: 2020201338 - TEATRO VERDI.pdf
+2025-10-24 19:03:00 | Envio para classificação | Arquivo: 2020201427 - DIV. CAP. LÂMPADAS.pdf
+2025-10-24 19:03:22 | Envio para classificação | Arquivo: 2020201427 - DIV. CAP. LÂMPADAS.pdf
+2025-10-24 19:04:19 | Envio para classificação | Arquivo: 2020201311 - CONSERVATÓRIO MUNICIPAL.pdf
+2025-10-24 19:05:23 | Envio para classificação | Arquivo: 2020201311 - CONSERVATÓRIO MUNICIPAL.pdf
+2025-10-24 19:05:43 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-24 19:06:06 | Envio para classificação | Arquivo: SegundaViaConta (16).pdf
+2025-10-24 19:16:34 | Envio para classificação | Arquivo: 25150542939.pdf
+2025-10-24 19:17:08 | Envio para classificação | Arquivo: 25150542939.pdf
+2025-10-24 19:17:53 | Envio para classificação | Arquivo: 238° MEDIÇÃO NF 5998.pdf
+2025-10-24 19:20:09 | Fatal Error (Shutdown) | Maximum execution time of 120 seconds exceeded in C:\wamp64\www\compras\public\processa_pdf.php on line 66
+2025-10-24 19:27:07 | Envio para classificação | Arquivo: cliente_77376_receber_1246439_948610536681001751403272.pdf
+2025-10-24 19:27:33 | Envio para classificação | Arquivo: 5094844929-25-09-2025.pdf
+2025-10-24 19:38:48 | Envio para classificação | Arquivo: 5094847108-25-09-2025.pdf
+2025-10-24 19:42:49 | Envio para classificação | Arquivo: 5094845776-25-09-2025.pdf
+2025-10-24 19:50:04 | Envio para classificação | Arquivo: 5094845776-25-09-2025.pdf
+2025-10-24 19:50:45 | Envio para classificação | Arquivo: SegundaViaConta (16).pdf
+2025-10-28 12:06:00 | Envio para classificação | Arquivo: SegundaViaConta (12).pdf
+2025-10-28 12:06:10 | Envio para classificação | Arquivo: 2002575531 - CEMITÉRIO DA SAUDADE.pdf
+2025-10-28 12:06:32 | Envio para classificação | Arquivo: 5094844747-25-09-2025.pdf
+2025-10-28 12:06:52 | Envio para classificação | Arquivo: 237° MEDIÇÃO NF 5937.pdf
+2025-10-28 12:09:12 | Fatal Error (Shutdown) | Maximum execution time of 120 seconds exceeded in C:\wamp64\www\compras\public\processa_pdf.php on line 66
+2025-10-28 14:12:45 | Envio para classificação | Arquivo: 5094844929-25-09-2025.pdf
+2025-10-28 14:17:27 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+2025-10-28 14:17:29 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-28 14:17:29 | Sucesso | Fatura de Energia Elétrica inserida com ID: 13
+2025-10-28 14:33:43 | Envio para classificação | Arquivo: 2020201338 - TEATRO VERDI.pdf
+2025-10-28 14:33:45 | Erro salvamento | Dados de formulário ausentes (categoria, detalhes ou arquivo_pdf).
+2025-10-28 16:14:15 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-28 16:14:18 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-28 16:14:18 | Sucesso | Fatura de Energia Elétrica inserida com ID: 14
+2025-10-28 16:15:42 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+2025-10-28 16:16:03 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-28 16:16:03 | Sucesso | Fatura de Energia Elétrica inserida com ID: 15
+2025-10-28 16:16:59 | Envio para classificação | Arquivo: SegundaViaConta (3).pdf
+2025-10-28 16:17:17 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-28 16:17:17 | Sucesso | Fatura de Água inserida com ID: 27
+2025-10-28 17:50:41 | Envio para classificação | Arquivo: 2002575531 - CEMITÉRIO DA SAUDADE.pdf
+2025-10-28 18:53:05 | Envio para classificação | Arquivo: 2020201338 - TEATRO VERDI.pdf
+2025-10-28 18:53:14 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-28 18:53:14 | Sucesso | Fatura de Energia Elétrica inserida com ID: 16
+2025-10-28 19:35:31 | Envio para classificação | Arquivo: 2020201311 - CONSERVATÓRIO MUNICIPAL.pdf
+2025-10-28 19:35:33 | Erro cURL | Failed to connect to localhost port 5001 after 2257 ms: Couldn't connect to server
+2025-10-29 11:32:55 | Envio para classificação | Arquivo: SegundaViaConta (6).pdf
+2025-10-29 11:32:58 | Erro cURL | Failed to connect to localhost port 5001 after 2234 ms: Couldn't connect to server
+2025-10-29 11:39:45 | Envio para classificação | Arquivo: SegundaViaConta (1).pdf
+2025-10-29 11:39:49 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+2025-10-29 11:39:49 | Sucesso | Fatura de Água inserida com ID: 28
+29-10-2025 18:45:57 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+29-10-2025 18:47:43 | Envio para classificação | Arquivo: 2020201362 - AUDITÓRIO MAESTRO GAÓ.pdf
+29-10-2025 18:47:56 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+29-10-2025 18:47:56 | Sucesso | Fatura de Energia Elétrica inserida com ID: 17
+29-10-2025 19:56:52 | Envio para classificação | Arquivo: 2020201362 - AUDITÓRIO MAESTRO GAÓ.pdf
+29-10-2025 19:56:54 | Erro cURL | Failed to connect to localhost port 5001 after 2263 ms: Couldn't connect to server
+30-10-2025 12:56:28 | Envio para classificação | Arquivo: 2002747120 - CRAS - JD. INDEPENDÊNCIA.pdf
+30-10-2025 12:56:30 | Erro cURL | Failed to connect to localhost port 5001 after 2247 ms: Couldn't connect to server
+30-10-2025 13:04:09 | Envio para classificação | Arquivo: 2002747120 - CRAS - JD. INDEPENDÊNCIA.pdf
+30-10-2025 13:05:33 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+30-10-2025 13:05:33 | Sucesso | Fatura de Energia Elétrica inserida com ID: 18
+30-10-2025 19:03:46 | Envio para classificação | Arquivo: 25150542939.pdf
+30-10-2025 19:04:05 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+30-10-2025 19:04:05 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'placa_veiculo' in 'field list'
+30-10-2025 19:04:15 | Envio para classificação | Arquivo: 5094844747-25-09-2025.pdf
+30-10-2025 19:04:17 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+30-10-2025 19:04:17 | Sucesso | Fatura de Telefone inserida com ID: 1
+31-10-2025 19:07:09 | Envio para classificação | Arquivo: Antena de UHF_06-2025.pdf
+31-10-2025 19:56:28 | Envio para classificação | Arquivo: Antena de UHF_06-2025.pdf
+31-10-2025 19:56:30 | Erro cURL | Failed to connect to localhost port 5001 after 2236 ms: Couldn't connect to server
+05-11-2025 14:25:54 | Envio para classificação | Arquivo: Abadia - Ligação Provisória_07-2025.pdf
+05-11-2025 14:25:55 | Erro API | HTTP: 400 | Resposta: {
+  "error": "Campo 'conta_mes' n\u00e3o encontrado ou vazio para a fatura de energia: upload_690b5e72bae1c9.58919783.pdf",
+  "status": "validation_failed"
+}
+
+05-11-2025 14:26:16 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+05-11-2025 14:27:01 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 14:27:01 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+05-11-2025 19:35:46 | Envio para classificação | Arquivo: Antigo Atende Fácil_06-2025.pdf
+05-11-2025 19:35:53 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 19:35:53 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+05-11-2025 19:37:57 | Envio para classificação | Arquivo: Antigo Atende Fácil_06-2025.pdf
+05-11-2025 19:37:59 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 19:37:59 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+05-11-2025 19:43:43 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 19:43:43 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+05-11-2025 19:45:52 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 19:45:52 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+05-11-2025 19:48:19 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 19:48:19 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+05-11-2025 19:48:26 | Envio para classificação | Arquivo: Antena de UHF_07-2025.pdf
+05-11-2025 19:48:28 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 19:48:28 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+05-11-2025 19:49:24 | Envio para classificação | Arquivo: 25150542939.pdf
+05-11-2025 19:49:39 | Info Associação Unidade | Nenhuma unidade coincidente. Atribuindo à unidade padrão ID=1.
+05-11-2025 19:49:39 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'placa_veiculo' in 'field list'
+06-11-2025 11:20:04 | Envio para classificação | Arquivo: Antigo Atende Fácil_06-2025.pdf
+06-11-2025 11:20:08 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+06-11-2025 12:10:58 | Envio para classificação | Arquivo: Antena de UHF_07-2025.pdf
+06-11-2025 12:11:00 | Info Associação Unidade | Nenhuma unidade selecionada. Atribuindo à unidade padrão ID=1.
+06-11-2025 12:11:00 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+06-11-2025 16:51:49 | Envio para classificação | Arquivo: Abadia - Ligação Provisória_07-2025.pdf
+06-11-2025 16:51:50 | Erro API | HTTP: 400 | Resposta: {
+  "error": "Campo 'conta_mes' n\u00e3o encontrado ou vazio para a fatura de energia: upload_690cd22584fd27.98410080.pdf",
+  "status": "validation_failed"
+}
+
+06-11-2025 16:52:37 | Envio para classificação | Arquivo: Faturas SAAE Janeiro e Fevereiro-3.pdf
+06-11-2025 16:53:38 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'proprietario' in 'field list'
+06-11-2025 17:05:08 | Envio para classificação | Arquivo: 2002747120 - CRAS - JD. INDEPENDÊNCIA.pdf
+06-11-2025 17:05:08 | Erro API | HTTP: 400 | Resposta: {
+  "error": "Campo 'conta_mes' n\u00e3o encontrado ou vazio para a fatura de energia: upload_690cd544165848.96094527.pdf",
+  "status": "validation_failed"
+}
+
+06-11-2025 17:22:51 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+06-11-2025 17:22:51 | Erro API | HTTP: 400 | Resposta: {
+  "error": "Campo 'conta_mes' n\u00e3o encontrado ou vazio para a fatura de energia: upload_690cd96b819f71.79449441.pdf",
+  "status": "validation_failed"
+}
+
+06-11-2025 18:10:14 | Envio para classificação | Arquivo: 2020201354 - MUSEU MUNICIPAL.pdf
+06-11-2025 18:10:21 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_original' in 'field list'
+06-11-2025 18:12:59 | Envio para classificação | Arquivo: 2020201320 - FONTE LUMINOSA - PRAÇA ARQUIMEDES LAMMOGLIA.pdf
+06-11-2025 18:13:03 | Sucesso | Fatura de Energia Elétrica inserida com ID: 19
+06-11-2025 18:18:16 | Envio para classificação | Arquivo: 2020201338 - TEATRO VERDI.pdf
+06-11-2025 18:18:20 | Sucesso | Fatura de Energia Elétrica inserida com ID: 20
+07-11-2025 15:21:55 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+07-11-2025 15:21:56 | Arquivo renomeado | De: upload_690e0e93c60524.05385892.pdf Para: 230000099109_AGO_230000099109.pdf
+07-11-2025 15:22:00 | Sucesso | Fatura de Energia Elétrica inserida com ID: 21
+07-11-2025 15:29:30 | Envio para classificação | Arquivo: 25150542939.pdf
+07-11-2025 15:29:42 | Arquivo renomeado | De: upload_690e105a7af766.28960134.pdf Para: 25150542939_mes_25150542939.pdf
+07-11-2025 15:29:44 | Erro Exceção DB | Exceção: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'placa_veiculo' in 'field list'
+07-11-2025 15:29:54 | Envio para classificação | Arquivo: 2020215304 - CRECHE - JD. NAÇÕES.pdf
+07-11-2025 15:29:54 | Arquivo renomeado | De: upload_690e10725a5d65.96123704.pdf Para: 230000099310_AGO_230000099310.pdf
+07-11-2025 15:29:56 | Sucesso | Fatura de Energia Elétrica inserida com ID: 22
+07-11-2025 15:37:35 | Envio para classificação | Arquivo: 2002001990 - CENTRO POP.pdf
+07-11-2025 15:37:36 | Arquivo renomeado | De: upload_690e123fad2226.53997418.pdf Para: energia_AGO_2025_230000099109.pdf
+07-11-2025 15:37:37 | Sucesso | Fatura de Energia Elétrica inserida com ID: 23
+07-11-2025 15:37:47 | Envio para classificação | Arquivo: Faturas SAAE Janeiro e Fevereiro-7.pdf
+07-11-2025 15:38:25 | Arquivo renomeado | De: upload_690e124b4f01d4.78823684.pdf Para: agua_JAN_ano_instalacao.pdf
+07-11-2025 15:38:31 | Sucesso | Fatura de Água inserida com ID: 29
+07-11-2025 17:32:00 | Envio para classificação | Arquivo: SegundaViaConta (3).pdf
+07-11-2025 17:32:02 | Erro cURL | Failed to connect to localhost port 5001 after 2266 ms: Couldn't connect to server
+07-11-2025 17:33:19 | Envio para classificação | Arquivo: SegundaViaConta (3).pdf
+07-11-2025 17:33:19 | Arquivo renomeado | De: upload_690e2d5f43eea5.99050747.pdf Para: agua_JUL_2025_9730.pdf
+07-11-2025 17:35:04 | Envio para classificação | Arquivo: SegundaViaConta (15).pdf
+07-11-2025 17:35:05 | Arquivo renomeado | De: upload_690e2dc8691eb6.18482456.pdf Para: agua_SET_2025_38018.pdf
+07-11-2025 17:41:50 | Envio para classificação | Arquivo: SegundaViaConta (1).pdf
+07-11-2025 17:41:50 | Arquivo renomeado | De: upload_690e2f5e681212.60028491.pdf Para: agua_SET_2025_9730.pdf
+07-11-2025 17:41:53 | Sucesso | Fatura de Água inserida com ID: 30
+07-11-2025 17:46:49 | Envio para classificação | Arquivo: SegundaViaConta (1).pdf
+07-11-2025 17:46:49 | Arquivo renomeado | De: upload_690e30897ef013.31424588.pdf Para: agua_SET_2025_9730.pdf
+07-11-2025 17:46:51 | Sucesso | Fatura de Água inserida com ID: 31
+07-11-2025 18:05:29 | Envio para classificação | Arquivo: SegundaViaConta (16).pdf
+07-11-2025 18:05:29 | Arquivo renomeado | De: upload_690e34e938a646.63525867.pdf Para: agua_AGO_2025_38018.pdf
+07-11-2025 18:05:31 | Sucesso | Fatura de Água inserida com ID: 32
