@@ -15222,3 +15222,484 @@ Array
 
 )
 
+[11-11-2025 11:29:04] [ERROR] [IP: ::1] [User: 2] Erro ao buscar registros com filtros {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_agua' in 'order clause'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(56): PDO->prepare('SELECT * FROM a...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(39): Agua->buscarComFiltros(Array)\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 63
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 39
+            [function] => buscarComFiltros
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:04] [ERROR] [IP: ::1] [User: 2] Erro ao calcular total pendente {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(117): PDO->query('SELECT SUM(valo...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(42): Agua->getTotalPendente()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 121
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 42
+            [function] => getTotalPendente
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:04] [ERROR] [IP: ::1] [User: 2] Erro ao buscar consumo mensal {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(82): PDO->query('SELECT\\r\\n       ...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(83): Agua->getConsumoMensal()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 85
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 83
+            [function] => getConsumoMensal
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:04] [ERROR] [IP: ::1] [User: 2] Erro ao calcular a soma da coluna valor_fatura {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\includes\\Model.php(148): PDO->prepare('SELECT SUM(valo...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(19): Model->sum('valor_fatura', Array)\n#2 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#3 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\includes\Model.php
+            [line] => 153
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\AguaController.php
+            [line] => 19
+            [function] => sum
+            [class] => Model
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:04] [ERROR] [IP: ::1] [User: 2] Erro ao calcular a soma da coluna multa {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'multa' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\includes\\Model.php(148): PDO->prepare('SELECT SUM(mult...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(21): Model->sum('multa')\n#2 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#3 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\includes\Model.php
+            [line] => 153
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\AguaController.php
+            [line] => 21
+            [function] => sum
+            [class] => Model
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:09] [ERROR] [IP: ::1] [User: 2] Erro ao buscar registros com filtros {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_energia' in 'order clause'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Energia.php(65): PDO->prepare('SELECT * FROM e...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(39): Energia->buscarComFiltros(Array)\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\EnergiaController.php(17): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\energia.php(44): EnergiaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Energia.php
+            [line] => 72
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 39
+            [function] => buscarComFiltros
+            [class] => Energia
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:09] [ERROR] [IP: ::1] [User: 2] Erro ao calcular total pendente {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Energia.php(126): PDO->query('SELECT SUM(valo...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(42): Energia->getTotalPendente()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\EnergiaController.php(17): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\energia.php(44): EnergiaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Energia.php
+            [line] => 130
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 42
+            [function] => getTotalPendente
+            [class] => Energia
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:09] [ERROR] [IP: ::1] [User: 2] Erro ao calcular média de consumo {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'data_vencimento' in 'where clause'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Energia.php(108): PDO->query('SELECT AVG(cons...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(47): Energia->getMediaConsumo()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\EnergiaController.php(17): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\energia.php(44): EnergiaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Energia.php
+            [line] => 112
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 47
+            [function] => getMediaConsumo
+            [class] => Energia
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:09] [ERROR] [IP: ::1] [User: 2] Erro ao buscar consumo mensal {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'data_vencimento' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Energia.php(91): PDO->query('SELECT\\r\\n       ...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(83): Energia->getConsumoMensal()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\EnergiaController.php(17): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\energia.php(44): EnergiaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Energia.php
+            [line] => 94
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 83
+            [function] => getConsumoMensal
+            [class] => Energia
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 11:29:09] [ERROR] [IP: ::1] [User: 2] Erro ao calcular a soma da coluna valor_final {"error":"Coluna inv\u00e1lida para soma: valor_final","trace":"#0 C:\\wamp64\\www\\compras\\src\\controllers\\EnergiaController.php(20): Model->sum('valor_final', Array)\n#1 C:\\wamp64\\www\\compras\\public\\energia.php(44): EnergiaController->index()\n#2 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\includes\Model.php
+            [line] => 153
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\EnergiaController.php
+            [line] => 20
+            [function] => sum
+            [class] => Model
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 14:57:01] [ERROR] [IP: ::1] [User: 1] Erro ao buscar registros com filtros {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_agua' in 'order clause'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(56): PDO->prepare('SELECT * FROM a...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(39): Agua->buscarComFiltros(Array)\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 63
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 39
+            [function] => buscarComFiltros
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 14:57:01] [ERROR] [IP: ::1] [User: 1] Erro ao calcular total pendente {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(117): PDO->query('SELECT SUM(valo...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(42): Agua->getTotalPendente()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 121
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 42
+            [function] => getTotalPendente
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 14:57:01] [ERROR] [IP: ::1] [User: 1] Erro ao buscar consumo mensal {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(82): PDO->query('SELECT\\r\\n       ...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(83): Agua->getConsumoMensal()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 85
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 83
+            [function] => getConsumoMensal
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 14:57:01] [ERROR] [IP: ::1] [User: 1] Erro ao calcular a soma da coluna valor_fatura {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\includes\\Model.php(148): PDO->prepare('SELECT SUM(valo...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(19): Model->sum('valor_fatura', Array)\n#2 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#3 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\includes\Model.php
+            [line] => 153
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\AguaController.php
+            [line] => 19
+            [function] => sum
+            [class] => Model
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 14:57:01] [ERROR] [IP: ::1] [User: 1] Erro ao calcular a soma da coluna multa {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'multa' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\includes\\Model.php(148): PDO->prepare('SELECT SUM(mult...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(21): Model->sum('multa')\n#2 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#3 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\includes\Model.php
+            [line] => 153
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\AguaController.php
+            [line] => 21
+            [function] => sum
+            [class] => Model
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 13:54:10] [INFO] [IP: ::1] [User: 1] Admin lookup fallback used {"found":true,"id":1,"nome":"Matheus Ginna","email":"matheusginna@gmail.com"}
+[11-11-2025 18:05:21] [ERROR] [IP: ::1] [User: 3] Erro ao buscar registros com filtros {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_agua' in 'order clause'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(56): PDO->prepare('SELECT * FROM a...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(39): Agua->buscarComFiltros(Array)\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 63
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 39
+            [function] => buscarComFiltros
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 18:05:21] [ERROR] [IP: ::1] [User: 3] Erro ao calcular total pendente {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(117): PDO->query('SELECT SUM(valo...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(42): Agua->getTotalPendente()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 121
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 42
+            [function] => getTotalPendente
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 18:05:21] [ERROR] [IP: ::1] [User: 3] Erro ao buscar consumo mensal {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\models\\Agua.php(82): PDO->query('SELECT\\r\\n       ...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\BaseController.php(83): Agua->getConsumoMensal()\n#2 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(16): BaseController->index()\n#3 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#4 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\models\Agua.php
+            [line] => 85
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\BaseController.php
+            [line] => 83
+            [function] => getConsumoMensal
+            [class] => Agua
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 18:05:21] [ERROR] [IP: ::1] [User: 3] Erro ao calcular a soma da coluna valor_fatura {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valor_fatura' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\includes\\Model.php(148): PDO->prepare('SELECT SUM(valo...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(19): Model->sum('valor_fatura', Array)\n#2 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#3 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\includes\Model.php
+            [line] => 153
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\AguaController.php
+            [line] => 19
+            [function] => sum
+            [class] => Model
+            [type] => ->
+        )
+
+)
+
+[11-11-2025 18:05:21] [ERROR] [IP: ::1] [User: 3] Erro ao calcular a soma da coluna multa {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'multa' in 'field list'","trace":"#0 C:\\wamp64\\www\\compras\\src\\includes\\Model.php(148): PDO->prepare('SELECT SUM(mult...')\n#1 C:\\wamp64\\www\\compras\\src\\controllers\\AguaController.php(21): Model->sum('multa')\n#2 C:\\wamp64\\www\\compras\\public\\agua.php(44): AguaController->index()\n#3 {main}"}
+Stack Trace:
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\includes\Model.php
+            [line] => 153
+            [function] => error
+            [class] => Logger
+            [type] => ->
+        )
+
+    [1] => Array
+        (
+            [file] => C:\wamp64\www\compras\src\controllers\AguaController.php
+            [line] => 21
+            [function] => sum
+            [class] => Model
+            [type] => ->
+        )
+
+)
+

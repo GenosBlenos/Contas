@@ -24,11 +24,12 @@ class SecurityManager {
         if (session_status() === PHP_SESSION_NONE) {
             // Configurar cookies seguros
             $cookieParams = session_get_cookie_params();
+            // Define secure flag dinamicamente: apenas em conexões HTTPS
             session_set_cookie_params([
                 'lifetime' => $cookieParams['lifetime'],
                 'path' => '/',
                 'domain' => $_SERVER['HTTP_HOST'],
-                'secure' => true,
+                'secure' => $this->isSecureConnection(),
                 'httponly' => true,
                 'samesite' => 'Strict'
             ]);

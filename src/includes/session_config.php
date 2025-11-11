@@ -15,9 +15,11 @@ ini_set('session.name', 'COMPRAS_SESSID');
 // Força a sessão a usar apenas cookies e não IDs na URL
 ini_set('session.use_only_cookies', 1);
 
-// Garante que o cookie da sessão seja enviado apenas por HTTPS
-// Em ambiente de desenvolvimento (localhost), pode ser necessário comentar a linha abaixo se não usar SSL
-// ini_set('session.cookie_secure', 1);
+// Garante que o cookie da sessão seja enviado apenas por HTTPS quando aplicável
+// Em ambiente de desenvolvimento (localhost) não forçamos o secure, apenas quando a conexão atual é HTTPS
+if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
+    ini_set('session.cookie_secure', 1);
+}
 
 // Impede que o JavaScript acesse o cookie da sessão
 ini_set('session.cookie_httponly', 1);

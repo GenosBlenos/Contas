@@ -37,8 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mensagem = 'Já existe um usuário com este e-mail.';
         } else {
             $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-            $stmt = $pdo->prepare('INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)');
-            if ($stmt->execute([$nome, $email, $senhaHash])) {
+            $stmt = $pdo->prepare('INSERT INTO usuario (nome, email, senha, admin) VALUES (?, ?, ?, ?)');
+            if ($stmt->execute([$nome, $email, $senhaHash, isset($_POST['admin']) ? 1 : 0])) {
                 $mensagem = 'Usuário cadastrado com sucesso!';
             } else {
                 $mensagem = 'Erro ao cadastrar usuário.';
@@ -49,45 +49,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Usuário</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+<body class="bg-gray-800 min-h-screen flex items-center justify-center">
     <div class="max-w-md w-full mx-4">
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="bg-[#404040] p-6 text-center">
+        <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-[#147cac] p-6 text-center">
+                <h1 class="text-3xl font-bold text-white">Sistema de Controle de Gastos</h1>
             </div>
             <div class="p-8">
                 <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Cadastro de Usuário</h2>
                 <?php if ($mensagem): ?>
-                    <div class="mb-4 px-4 py-3 rounded <?php echo (strpos($mensagem, 'sucesso') !== false) ? 'bg-green-100 border border-green-400 text-green-700' : 'bg-red-100 border border-red-400 text-red-700'; ?>">
+                    <div
+                        class="mb-4 px-4 py-3 rounded <?php echo (strpos($mensagem, 'sucesso') !== false) ? 'bg-green-100 border border-green-400 text-green-700' : 'bg-red-100 border border-red-400 text-red-700'; ?>">
                         <?= htmlspecialchars($mensagem) ?>
                     </div>
                 <?php endif; ?>
                 <form method="POST" class="space-y-6">
-                    <div>
-                        <label for="nome" class="block text-sm font-medium text-gray-700">Nome:</label>
-                        <input type="text" name="nome" id="nome" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">E-mail:</label>
-                        <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                    </div>
-                    <div>
-                        <label for="senha" class="block text-sm font-medium text-gray-700">Senha:</label>
-                        <input type="password" name="senha" id="senha" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                    </div>
-                    <div>
-                        <label for="senha2" class="block text-sm font-medium text-gray-700">Repita a Senha:</label>
-                        <input type="password" name="senha2" id="senha2" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                    </div>
-                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#072a3a] hover:bg-[#0a3e56] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#072a3a]">Cadastrar</button>
+                    <div class="px-3 py-3">
+                        <div>
+                            <label for="nome" class="block text-lg font-medium text-gray-700">Nome:</label>
+                            <input type="text" name="nome" id="nome" required
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mt-2 text-lg font-medium text-gray-700">E-mail:</label>
+                            <input type="email" name="email" id="email" required
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="senha" class="block mt-2 text-lg font-medium text-gray-700">Senha:</label>
+                            <input type="password" name="senha" id="senha" required
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="senha2" class="block mt-2 text-lg font-medium text-gray-700">Repita a Senha:</label>
+                            <input type="password" name="senha2" id="senha2" required
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="admin" class="inline-flex items-center">
+                                <input type="checkbox" name="admin" id="admin"
+                                    class="h-4 w-4 mt-2 text-indigo-600 focus:ring-indigo-500 border-gray-500 rounded">
+                                <span class="mt-2 ml-2 text-lg font-medium text-gray-700">Administrador</span>
+                        </div>
+                        <button type="submit"
+                            class="w-full mt-5 flex justify-center py-5 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-[#147cac] hover:bg-[#0f5f85] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0a3e57]">Cadastrar</button>
                 </form>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>
