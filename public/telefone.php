@@ -4,7 +4,7 @@ session_start();
 require_once __DIR__ . '/../src/includes/auth.php';
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /compras/login.php');
+    header('Location: /Contas/login.php');
     exit;
 }
 require_once __DIR__ . '/../src/includes/helpers.php';

@@ -9,7 +9,7 @@ $pdo = Database::getInstance()->getConnection();
 $pageTitle = 'Recomendações';
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /compras/login.php');
+    header('Location: /Contas/login.php');
     session_start();
     exit;
 }

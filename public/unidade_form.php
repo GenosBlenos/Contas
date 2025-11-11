@@ -8,7 +8,7 @@ require_once __DIR__ . '/../src/controllers/UnidadesController.php';
 require_once __DIR__ . '/../src/includes/header.php';
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /compras/login.php');
+    header('Location: /Contas/login.php');
     exit;
 }
 

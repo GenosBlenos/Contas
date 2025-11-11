@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', '/compras/');
+define('BASE_URL', '/Contas/');
 
 if (!defined('ML_API_URL')) {
     define('ML_API_URL', 'http://localhost:5001');

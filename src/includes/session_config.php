@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_ACTIVE) {
 }
 
 // Define o nome do cookie da sessão para algo específico do aplicativo
-ini_set('session.name', 'COMPRAS_SESSID');
+ini_set('session.name', 'Contas_SESSID');
 
 // Força a sessão a usar apenas cookies e não IDs na URL
 ini_set('session.use_only_cookies', 1);

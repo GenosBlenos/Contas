@@ -1,8 +1,8 @@
-# Compras
+# Contas
 
 ----------------------------------------------------
 
-Sistema de compras da Prefeitura
+Sistema de Contas da Prefeitura
 
 ---------------------------------------------------
 

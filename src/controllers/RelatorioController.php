@@ -7,7 +7,7 @@ class RelatorioController
     public function index()
     {
         // Lógica para buscar dados de diferentes fontes e prepará-los para a view de relatórios.
-        // Ex: Compras por período, produtos mais comprados, etc.
+        // Ex: Contas por período, produtos mais , etc.
         $dadosRelatorio = []; // Substituir pela lógica real
 
         return ['dadosRelatorio' => $dadosRelatorio];

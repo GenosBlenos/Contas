@@ -9,7 +9,7 @@ require_once __DIR__ . '/../includes/helpers.php';
 require_once __DIR__ . '/../includes/flash_helpers.php';
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /compras/login.php');
+    header('Location: /Contas/login.php');
     exit;
 }
 

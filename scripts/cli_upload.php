@@ -24,7 +24,7 @@ $cookieFile = sys_get_temp_dir() . '/compras_test_cookie.txt';
 file_put_contents($cookieFile, "PHPSESSID=" . session_id());
 
 // Prepare cURL POST to the application's public endpoint
-$url = 'http://127.0.0.1/compras/public/processa_pdf.php';
+$url = 'http://127.0.0.1/Contas/public/processa_pdf.php';
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

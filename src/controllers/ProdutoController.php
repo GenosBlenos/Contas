@@ -79,7 +79,7 @@ class ProdutoController
             flashMessage('success', 'Produto excluído com sucesso.');
         } catch (PDOException $e) {
             // Tratar erro de chave estrangeira, se aplicável
-            flashMessage('error', 'Erro ao excluir produto. Verifique se ele não está associado a uma compra.');
+            flashMessage('error', 'Erro ao excluir produto. Verifique se ele não está associado a uma conta.');
         }
         header('Location: index.php?page=produtos');
         exit;

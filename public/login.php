@@ -49,9 +49,9 @@ function sendLoginAttemptEmail($recipientEmail, $recipientName, $ipAddress, $att
         <html>
           <body style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; color: #333;'>
             <div style='max-width: 600px; margin: auto; background-color: #fff; border-radius: 8px; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1);'>
-              <div style='text-align: center;'>
-                <img src='cid:gordon.jpg' alt='Logotipo da Biblioteca' style='max-width: 200px; border-radius: 10%;'/>
-              </div>
+              <div style='text-align: center; margin-bottom: 20px;'>
+                <img src='cid:logo_gordon' alt='Logotipo da Prefeitura' style='max-width: 150px;'/>
+              </div> 
               <h2 style='color: #072a3a;'>Alerta de Tentativas de Login</h2>
               <p>Olá, <strong>{$recipientName}</strong>,</p>
               <p>Detectamos <strong>múltiplas tentativas de login falhas</strong> em sua conta da Biblioteca de Salto.</p>
@@ -70,6 +70,7 @@ function sendLoginAttemptEmail($recipientEmail, $recipientName, $ipAddress, $att
         error_log("Erro ao enviar e-mail de aviso para {$recipientEmail}: {$mail->ErrorInfo}");
     }
 }
+
 // Função para cadastrar usuário (exemplo de uso seguro)
 function cadastrarUsuario($pdo, $nome, $email, $senha) {
     // Sempre armazena hash seguro
@@ -78,50 +79,63 @@ function cadastrarUsuario($pdo, $nome, $email, $senha) {
     return $stmt->execute([$nome, $email, $senhaHash]);
 }
 
-
 if (isset($_POST['entrar'])) {
     $email = trim($_POST['email']);
     $senha = trim($_POST['senha']);
     $ip_address = $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN'; // Obter IP do cliente
 
     try {
+        // PRIMEIRO verifica se é admin
+        $stmt_adm = $pdo->prepare("SELECT id, nome, email, senha, bloqueado, admin FROM usuario WHERE email = ? AND admin =1 LIMIT 1");
+        $stmt_adm->execute([$email]);
+        $adm = $stmt_adm->fetch(PDO::FETCH_ASSOC);
 
-        // Busca usuário na tabela usuario
-        $stmt = $pdo->prepare("SELECT id, nome, email, senha, bloqueado FROM usuario WHERE email = ? LIMIT 1");
-        $stmt->execute([$email]);
-        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-        if (!$usuario) {
-            // Usuário não encontrado, registrar tentativa falha
-            $stmt_log = $pdo->prepare("INSERT INTO tentativa_login (email, ip_address) VALUES (?, ?)");
-            $stmt_log->execute([$email, $ip_address]);
-            throw new Exception("Usuário ou senha incorretos.");
+        if ($adm) {
+            $role = 'admin';
+            $usuario = $adm;
+            
+            // Verifica se o admin está bloqueado
+            if ($adm['bloqueado']) {
+                throw new Exception("Sua conta de administrador está bloqueada. Entre em contato com o suporte.");
+            }
+        } else {
+            // Se não é admin, verifica se é usuário normal
+            $stmt = $pdo->prepare("SELECT id, nome, email, senha, bloqueado FROM usuario WHERE email = ? LIMIT 1");
+            $stmt->execute([$email]);
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if (!$usuario) {
+                // Usuário não encontrado em nenhuma tabela
+                $stmt_log = $pdo->prepare("INSERT INTO tentativa_login (email, ip_address) VALUES (?, ?)");
+                $stmt_log->execute([$email, $ip_address]);
+                throw new Exception("Usuário ou senha incorretos.");
+            }
+            
+            $role = 'usuario';
+            
+            // Verifica se o usuário está bloqueado
+            if ($usuario['bloqueado']) {
+                throw new Exception("Sua conta está bloqueada. Entre em contato com o administrador.");
+            }
         }
-        $role = 'usuario';
 
-        // Verifica se o usuário está bloqueado
-
-        if ($usuario['bloqueado']) {
-            throw new Exception("Sua conta está bloqueada. Entre em contato com o administrador.");
-        }
-
-
+        // VERIFICAÇÃO DE SENHA (para ambos admin e usuário)
         $login_success = false;
+        
         // 1. Tentativa com password_verify
         if (password_verify($senha, $usuario['senha'])) {
             $login_success = true;
         }
         // 2. Comparação direta (para senhas não hashadas, **REMOVER PÓS-MIGRAÇÃO**)
         elseif ($senha === $usuario['senha']) {
-            error_log("Autenticação via comparação direta (NÃO SEGURO!)");
+            error_log("Autenticação via comparação direta (NÃO SEGURO!) para: " . $email);
             $login_success = true;
         }
         // 3. Fallback para hashes antigos (MD5) (**REMOVER PÓS-MIGRAÇÃO**)
         elseif (md5($senha) === $usuario['senha']) {
-            error_log("Autenticação via MD5 (NÃO SEGURO!)");
+            error_log("Autenticação via MD5 (NÃO SEGURO!) para: " . $email);
             $login_success = true;
         }
-
-
 
         if ($login_success) {
             // Login bem-sucedido
@@ -134,7 +148,7 @@ if (isset($_POST['entrar'])) {
             $stmt_clear_attempts = $pdo->prepare("DELETE FROM tentativa_login WHERE email = ?");
             $stmt_clear_attempts->execute([$email]);
 
-            header('Location: /compras/public/index.php');
+            header('Location: /Contas/public/index.php');
             exit;
         } else {
             // Senha incorreta
@@ -189,7 +203,7 @@ if (isset($_POST['entrar'])) {
     <div class="max-w-md w-full mx-4">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="border: 3px solid #083347ff;">
             <div class="bg-[#147cac] p-6 text-center" style="border-bottom: 3px solid #083347ff;">
-                <img src="./assets/logo-prefeitura-hd.png" alt="Logo" class="h-16 mx-auto">
+                <img src="../assets/logo-prefeitura-hd.png" alt="Logo" class="h-16 mx-auto">
             </div>
             
             <div class="p-8">

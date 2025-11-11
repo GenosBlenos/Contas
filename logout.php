@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: ../compras/login.php");
+header("Location: ../Contas/public/login.php");
 exit();
 ?>

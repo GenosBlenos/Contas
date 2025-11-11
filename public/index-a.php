@@ -4,7 +4,7 @@ session_start();
 require_once __DIR__ . '/../src/includes/auth.php';
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /compras/login.php');
+    header('Location: /Contas/login.php');
     exit;
 }
 
@@ -49,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,6 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <button type="submit"
                             class="w-full mt-5 flex justify-center py-5 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-[#147cac] hover:bg-[#0f5f85] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0a3e57]">Cadastrar</button>
                 </form>
+                <a href="index.php"
+                            class="w-full mt-5 flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-[#cc0e00] hover:bg-[#9e0b00] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#700901]">Cancelar</a>
             </div>
         </div>
     </div>

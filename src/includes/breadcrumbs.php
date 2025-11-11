@@ -7,7 +7,7 @@ function generate_breadcrumbs() {
     $path_parts = explode('/', trim($url_path, '/'));
 
     // Remove the project folder if present
-    $project_folder = 'compras';
+    $project_folder = 'Contas';
     $project_folder_index = array_search($project_folder, $path_parts);
     if ($project_folder_index !== false) {
         $path_parts = array_slice($path_parts, $project_folder_index + 1);
@@ -18,7 +18,7 @@ function generate_breadcrumbs() {
         return;
     }
 
-    $base_url = '/compras/public/';
+    $base_url = '/Contas/public/';
     $current_url = $base_url;
     $breadcrumbs[] = ['url' => $base_url . 'index.php', 'label' => 'Home'];
 

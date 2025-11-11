@@ -13,7 +13,7 @@ require_once __DIR__ . '/../../includes/SecurityManager.php';
 $securityManager = SecurityManager::getInstance();
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /compras/login.php');
+    header('Location: /Contas/login.php');
     exit;
 }
 
@@ -48,7 +48,7 @@ $controllers = [
     'fornecedores' => 'FornecedorController',
     'categorias' => 'CategoriaController',
     'produtos' => 'ProdutoController',
-    'compras' => 'CompraController',
+    'Contas' => 'ContasController',
     'relatorios_mvc' => 'RelatorioController', // Renomeado para evitar conflito com relatorios.php
     'usuarios' => 'UsuarioController',
 ];
