@@ -93,6 +93,24 @@ $content = <<<HTML
                 <p class="text-gray-600">Gerencie as unidades administrativas e prédios públicos vinculados ao sistema para melhor organização das despesas.</p>
             </div>
 
+            <!-- Documentos -->
+            <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/documents.png" alt="Documentos" class="w-8 h-8 mr-3">
+                    <h3 class="text-lg font-semibold text-gray-800">Documentos</h3>
+                </div>
+                <p class="text-gray-600">Gerencie os documentos relacionados às despesas, como faturas e contratos, para fácil acesso e organização.</p>
+            </div>
+
+            <!-- Paínel de Controle -->
+            <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/dashboard.png" alt="Painel de Controle" class="w-8 h-8 mr-3">
+                    <h3 class="text-lg font-semibold text-gray-800">Painel de Controle</h3>
+                </div>
+                <p class="text-gray-600">Acesso rápido às principais métricas e status do sistema para monitoramento eficiente.</p>
+            </div>
+
             <!-- Possíveis Futuros Módulos -->
             <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 <div class="flex items-center mb-4">

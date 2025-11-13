@@ -7,7 +7,7 @@ if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
     header('Location: /Contas/login.php');
     exit;
 }
-
+require_once __DIR__ . '/../src/includes/Database.php';
 require_once __DIR__ . '/../src/controllers/EnergiaController.php';
 require_once __DIR__ . '/../src/includes/helpers.php';
 require_once __DIR__ . '/../src/includes/faturas_helper.php';
