@@ -1,6 +1,5 @@
 <?php
-// Garante que as constantes de configuração do banco de dados estejam definidas.
-require_once __DIR__ . '/../../configuracoes.php'; // Já estava como require_once, o que é bom.
+require_once __DIR__ . '/../../app/configuracoes.php';
 require_once __DIR__ . '/Logger.php';
 
 class Database {

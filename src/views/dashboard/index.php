@@ -357,7 +357,7 @@ if (isset($_GET['logout_admin'])) {
             <!-- Card Sem Parar -->
             <a href="semparar.php"
                 class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:shadow-xl transition-shadow duration-300">
-                <img src="../assets/car.png" alt="Sem Parar" class="w-16 h-16 mb-4">
+                <img src="../assets/car.png" alt="Sem Parar" class="w-18 h-16 mb-4">
                 <h3 class="text-lg font-semibold text-gray-800">Sem Parar</h3>
             </a>
 

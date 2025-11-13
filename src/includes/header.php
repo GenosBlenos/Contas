@@ -29,7 +29,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <?php if (isset($_SESSION['logado']) && $_SESSION['logado']): ?>
                 <div class="flex items-center space-x-4">
                     <span>Olá, <?php echo htmlspecialchars($_SESSION['nome']); ?></span>
-                    <a href="<?php echo BASE_URL; ?>logout.php" class="flex items-center space-x-2 hover:text-gray-300">
+                    <a href="<?php echo BASE_URL; ?>/public/logout.php" class="flex items-center space-x-2 hover:text-gray-300">
                         <img src="<?php echo BASE_URL; ?>assets/log-out.png" alt="Sair" class="h-6">
                         <span>Sair</span>
                     </a>
