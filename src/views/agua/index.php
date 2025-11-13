@@ -137,6 +137,9 @@ $registros_agua = $stmtRegistros->fetchAll();
             </table>
         </div>
     </div>
+
+    <!-- Componente de Paginação -->
+    <?php require_once __DIR__ . '/../components/pagination_component.php'; ?>
 </div>
 <?php
 $content = ob_get_clean();

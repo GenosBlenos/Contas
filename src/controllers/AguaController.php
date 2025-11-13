@@ -13,7 +13,7 @@ class AguaController extends BaseController {
 
     public function index() {
         // Chama o método index do BaseController para obter a lógica padrão (filtros, paginação, etc.)
-        parent::index();
+        $data = parent::index();
 
         // Calcula os totais específicos para a página de agua
         $totalPendente = $this->model->sum('valor_fatura', ['status' => 'pendente']);
@@ -21,9 +21,11 @@ class AguaController extends BaseController {
         $totalMulta = $this->model->sum('multa');
 
         // Adiciona os novos dados aos dados que já serão enviados para a view
-        $this->viewData['totalPendente'] = $totalPendente;
-        $this->viewData['mediaConsumo'] = $mediaConsumo;
-        $this->viewData['totalMulta'] = $totalMulta;
+        $data['totalPendente'] = $totalPendente;
+        $data['mediaConsumo'] = $mediaConsumo;
+        $data['totalMulta'] = $totalMulta;
+        
+        return $data;
     }
 
     /**

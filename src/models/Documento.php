@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../includes/Model.php';
+require_once __DIR__ . '/../includes/Database.php';
 
 class Documento extends Model
 {
@@ -23,10 +24,11 @@ class Documento extends Model
     }
 
     public function findByModule($module)
-    {
-        $sql = "SELECT * FROM {$this->table} WHERE modulo = ? ORDER BY criado_em DESC";
-        $stmt = $this->db->prepare($sql);
-        $stmt->execute([$module]);
+    {   
+        $pdo = Database::getInstance()->getConnection();
+        $sql = "SELECT * FROM {$module} ORDER BY criado_em DESC";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 

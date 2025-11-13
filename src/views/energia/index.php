@@ -188,6 +188,10 @@ document.addEventListener('DOMContentLoaded', function () {
     [fatImpostosInput, impostoRetidoTotalInput, impostoRetidoIrrfInput].forEach(input => input.addEventListener('input', calcularValorFinal));
 });
 </script>
+
+<!-- Componente de Paginação -->
+<?php require_once __DIR__ . '/../components/pagination_component.php'; ?>
+
 <?php
 $content = ob_get_clean();
 require_once __DIR__ . '/../../includes/template.php';

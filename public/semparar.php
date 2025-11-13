@@ -10,6 +10,8 @@ if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
 require_once __DIR__ . '/../src/includes/helpers.php';
 require_once __DIR__ . '/../src/includes/faturas_helper.php'; // Inclui o novo helper
 require_once __DIR__ . '/../src/includes/Database.php'; // Inclui a classe do banco de dados
+require_once __DIR__ . '/../src/includes/PaginationHelper.php';
+
 $pdo = Database::getInstance()->getConnection(); // Obtém a conexão PDO
 
 // Define o título da página e o módulo para o menu de navegação
@@ -32,12 +34,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
 // 1. Buscar os registros de Sem Parar da tabela
 $filtros = ['categoria' => 'semparar'];
-$registros_semparar = buscarFaturas($pdo, $filtros) ?? [];
+$registros_semparar_all = buscarFaturas($pdo, $filtros) ?? [];
 
 // 2. Calcular os totais para os cartões do dashboard
-$totais = calcularTotaisFaturas($registros_semparar, 'semparar');
+$totais = calcularTotaisFaturas($registros_semparar_all, 'semparar');
 extract($totais); // Extrai $totalPendente, etc.
+
+// Configurar paginação
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$limit = 10; // Itens por página
+
+$total_registros = count($registros_semparar_all);
+$pagination = new PaginationHelper($total_registros, $limit, $page);
+
+// Paginar os registros
+$offset = $pagination->getOffset();
+$registros_semparar = array_slice($registros_semparar_all, $offset, $limit);
 
 require_once __DIR__ . '/../src/includes/header.php';
 
 require_once __DIR__ . '/../src/views/semparar/index.php';
+?>

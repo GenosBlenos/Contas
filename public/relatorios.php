@@ -67,9 +67,9 @@ ob_start();
         </div>
         
         <!-- Detailed Report Table -->
-        <div id="report-table-container" class="hidden mt-6">
+        <div id="report-table-container" class="hidden mt-6 max-h-96 overflow-y-auto border border-gray-200 rounded-lg">
             <table id="report-table" class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50"></thead>
+                <thead class="bg-gray-50 sticky top-0"></thead>
                 <tbody></tbody>
             </table>
         </div>
@@ -94,6 +94,27 @@ document.addEventListener('DOMContentLoaded', function() {
     function formatCurrency(value) {
         if (value === null || isNaN(value)) return 'R$ 0,00';
         return parseFloat(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
+    function formatDate(dateString) {
+        if (!dateString) return dateString;
+        // Verifica se é formato YYYY-MM-DD
+        const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+        if (dateRegex.test(dateString)) {
+            const [year, month, day] = dateString.split('-');
+            return `${day}-${month}-${year}`;
+        }
+        return dateString;
+    }
+
+    function formatRowData(row) {
+        // Itera por cada campo da linha e formata datas
+        Object.keys(row).forEach(key => {
+            if (row[key] && typeof row[key] === 'string') {
+                row[key] = formatDate(row[key]);
+            }
+        });
+        return row;
     }
 
     function fetchSummaryData() {
@@ -166,6 +187,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     summaryCardsContainer.classList.remove('hidden');
                     return;
                 }
+
+                // Formata todas as datas nos dados
+                data = data.map(row => formatRowData(row));
 
                 const columns = Object.keys(data[0]).map(key => ({ title: key, data: key }));
                 

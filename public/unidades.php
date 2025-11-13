@@ -2,17 +2,18 @@
 require_once __DIR__ . '/../src/includes/session_config.php';
 session_start();
 require_once __DIR__ . '/../src/includes/auth.php';
-
-if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /Contas/login.php');
-    exit;
-}
-require_once __DIR__ . '/../src/includes/helpers.php';
-
-$_GET['module'] = 'unidades';
 require_once __DIR__ . '/../src/includes/header.php';
 require_once __DIR__ . '/../src/controllers/UnidadesController.php';
+$pageTitle = 'Dashboard';
 
+// 1. Ponto de Entrada e Autenticação
+require_once __DIR__ . '/../src/includes/Logger.php';
+require_once __DIR__ . '/../src/includes/SecurityManager.php';
+
+$pageTitle = 'Documentos - Gerenciamento de Faturas';
+
+// Obtém o módulo da URL, se existir
+$module = $_GET['module'] ?? null;
 $controller = new UnidadesController();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -29,7 +30,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             break;
     }
 } else {
+    // 1. Obter parâmetros de pesquisa e página da URL
+    $search = $_GET['search'] ?? '';
+    $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+    $limit = 10; // Define quantos itens por página
+
+    // 2. Definir o título da página
     $pageTitle = 'Unidades';
-    $registros = $controller->index();
-    require_once __DIR__ . '/../src/views/unidades/index.php';
+
+    // 3. Chamar o método index do controlador com os novos parâmetros
+    // (Você precisará atualizar o UnidadesController para aceitar isso, veja abaixo)
+    $data = $controller->index($search, $page, $limit);
+
+    // 4. Extrair as variáveis que a view (index.php) espera
+    $registros = $data['registros'];
+    $total_pages = $data['total_pages'];
 }
+
+?>
+<?php include __DIR__ . '/../src/views/unidades/index.php'; ?>

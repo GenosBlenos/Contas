@@ -389,13 +389,13 @@ if (isset($_GET['logout_admin'])) {
                 <h3 class="text-lg font-semibold text-gray-800">Unidades</h3>
             </a>
 
-            <!-- Card Suporte -->
-            <a href="support.php"
+            <!-- Card Documentos  -->
+            <a href="documentos.php"
                 class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:shadow-xl transition-shadow duration-300">
-                <img src="../assets/support.png" alt="Ajuda" class="w-16 h-16 mb-4">
-                <h3 class="text-lg font-semibold text-gray-800">Ajuda e Suporte</h3>
+                <img src="../assets/documents.png" alt="Unidades" class="w-16 h-16 mb-4">
+                <h3 class="text-lg font-semibold text-gray-800">Documentos</h3>
             </a>
-
+            
             <!-- Card Cadastrar Fatura PDF -->
             <a href="cad_fatura_pdf.php"
                 class="bg-blue-500 text-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:bg-blue-600 transition-colors duration-300 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4">
@@ -406,6 +406,12 @@ if (isset($_GET['logout_admin'])) {
                         <p class="text-sm">Envie um arquivo PDF para extrair os dados da fatura automaticamente.</p>
                     </div>
                 </div>
+            </a>
+
+            <a href="support.php"
+                class="bg-[#fff] border-2 border-blue-200 rounded-2xl shadow-lg p-1 flex flex-col items-center mr-4">
+                <img src="../assets/support.png" alt="Ajuda" class="w-8 h-8 ml-1">
+                <h3 class="text-sm font-semibold text-gray-800">Suporte</h3>
             </a>
         </div>
     </div>

@@ -3,6 +3,7 @@ require_once __DIR__ . '/../src/includes/session_config.php';
 session_start();
 require_once __DIR__ . '/../src/includes/auth.php';
 require_once __DIR__ . '/../src/includes/header.php';
+require_once __DIR__ . '/../src/controllers/DocumentosController.php';
 $pageTitle = 'Dashboard';
 
 // 1. Ponto de Entrada e Autenticação
@@ -116,10 +117,6 @@ ob_start();
                class="px-3 py-1 rounded-full text-sm <?= $module === 'telefone' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300' ?>">
                 📞 Telefone
             </a>
-            <a href="documentos.php?module=internet" 
-               class="px-3 py-1 rounded-full text-sm <?= $module === 'internet' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300' ?>">
-                🌐 Internet
-            </a>
             <a href="documentos.php?module=semparar" 
                class="px-3 py-1 rounded-full text-sm <?= $module === 'semparar' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300' ?>">
                 🚗 Sem Parar
@@ -148,32 +145,32 @@ ob_start();
                     </thead>
                     <tbody class="divide-y divide-gray-200">
                         <?php foreach ($documentos as $documento): 
-                            $dadosFatura = $controller->obterDadosFatura($documento['id']);
-                            $nomeAtual = pathinfo($documento['arquivo'], PATHINFO_FILENAME);
+                            $dadosFatura = ($module);
+                            $nomeAtual = pathinfo($documento['arquivo_pdf'], PATHINFO_FILENAME);
                         ?>
                         <tr class="hover:bg-gray-50">
                             <td class="py-3 px-4 whitespace-nowrap">
-                                <div class="text-sm font-medium text-gray-900"><?= htmlspecialchars($documento['titulo']); ?></div>
+                                <div class="text-sm font-medium text-gray-900"><?= htmlspecialchars($documento['arquivo_pdf']); ?></div>
                             </td>
                             <td class="py-3 px-4 whitespace-nowrap">
                                 <div class="flex items-center gap-2">
-                                    <a href="uploads/<?= htmlspecialchars($documento['arquivo']); ?>" 
+                                    <a href="<?= htmlspecialchars($documento['arquivo_pdf']); ?>" 
                                        target="_blank" 
                                        class="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1">
-                                        📎 <?= htmlspecialchars($documento['arquivo']); ?>
+                                        📎 <?= htmlspecialchars($documento['arquivo_pdf']); ?>
                                     </a>
                                 </div>
                                 <div class="text-xs text-gray-500 mt-1">Nome atual: <?= htmlspecialchars($nomeAtual); ?></div>
                             </td>
                             <td class="py-3 px-4 whitespace-nowrap">
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
-                                    <?= $dadosFatura['modulo'] === 'agua' ? 'bg-blue-100 text-blue-800' : '' ?>
-                                    <?= $dadosFatura['modulo'] === 'energia' ? 'bg-yellow-100 text-yellow-800' : '' ?>
-                                    <?= $dadosFatura['modulo'] === 'telefone' ? 'bg-green-100 text-green-800' : '' ?>
-                                    <?= $dadosFatura['modulo'] === 'internet' ? 'bg-purple-100 text-purple-800' : '' ?>
-                                    <?= $dadosFatura['modulo'] === 'semparar' ? 'bg-red-100 text-red-800' : '' ?>
+                                    <?= $dadosFatura === 'agua' ? 'bg-blue-100 text-blue-800' : '' ?>
+                                    <?= $dadosFatura === 'energia' ? 'bg-yellow-100 text-yellow-800' : '' ?>
+                                    <?= $dadosFatura === 'telefone' ? 'bg-green-100 text-green-800' : '' ?>
+                                    <?= $dadosFatura === 'internet' ? 'bg-purple-100 text-purple-800' : '' ?>
+                                    <?= $dadosFatura === 'semparar' ? 'bg-red-100 text-red-800' : '' ?>
                                     capitalize">
-                                    <?= htmlspecialchars($dadosFatura['modulo'] ?? 'Não definido'); ?>
+                                    <?= htmlspecialchars($dadosFatura ?? 'Não definido'); ?>
                                 </span>
                             </td>
                             <td class="py-3 px-4 whitespace-nowrap text-sm text-gray-500">
@@ -182,7 +179,7 @@ ob_start();
                             <td class="py-3 px-4 whitespace-nowrap text-sm font-medium">
                                 <div class="flex flex-wrap gap-1">
                                     <!-- Botão Visualizar -->
-                                    <a href="uploads/<?= htmlspecialchars($documento['arquivo']); ?>" 
+                                    <a href="<?= htmlspecialchars($documento['arquivo_pdf']); ?>" 
                                        target="_blank"
                                        class="inline-flex items-center px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs hover:bg-blue-200 transition-colors">
                                         👁️ Visualizar
@@ -410,4 +407,4 @@ document.addEventListener('keydown', function(event) {
 
 <?php
 $content = ob_get_clean();
-require __DIR__ . '/src/includes/template.php';
+require __DIR__ . '/../src/includes/template.php';

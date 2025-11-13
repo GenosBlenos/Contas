@@ -10,6 +10,7 @@ if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
 
 require_once __DIR__ . '/../src/controllers/InternetController.php';
 require_once __DIR__ . '/../src/includes/helpers.php';
+require_once __DIR__ . '/../src/includes/PaginationHelper.php';
 
 $controller = new InternetController();
 
@@ -33,5 +34,17 @@ $_GET['module'] = 'internet';
 
 $data = $controller->index();
 
+// Configurar paginação
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$limit = 10; // Itens por página
+
+$total_registros = count($data['registros'] ?? []);
+$pagination = new PaginationHelper($total_registros, $limit, $page);
+
+// Paginar os registros
+$offset = $pagination->getOffset();
+$registros = array_slice($data['registros'] ?? [], $offset, $limit);
+
 require_once __DIR__ . '/../src/includes/header.php';
 require_once __DIR__ . '/../src/views/internet/index.php';
+?>

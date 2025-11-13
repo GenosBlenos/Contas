@@ -11,6 +11,7 @@ if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
 require_once __DIR__ . '/../src/controllers/AguaController.php';
 require_once __DIR__ . '/../src/includes/helpers.php';
 require_once __DIR__ . '/../src/includes/faturas_helper.php';
+require_once __DIR__ . '/../src/includes/PaginationHelper.php';
 
 $controller = new AguaController();
 
@@ -43,5 +44,18 @@ $_GET['module'] = 'agua';
 
 $data = $controller->index();
 
+// Configurar paginação
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$limit = 10; // Itens por página
+
+$total_registros = count($data['registros'] ?? []);
+$pagination = new PaginationHelper($total_registros, $limit, $page);
+
+// Paginar os registros
+$offset = $pagination->getOffset();
+$registros_agua = array_slice($data['registros'] ?? [], $offset, $limit);
+
 require_once __DIR__ . '/../src/includes/header.php';
 require_once __DIR__ . '/../src/views/agua/index.php';
+?>
+

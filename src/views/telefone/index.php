@@ -117,7 +117,7 @@ $registros_telefone = $stmtRegistros->fetchAll();
                                 </td>
                             </tr>
                         <?php endforeach; ?>
-                    <?php else: ?>
+                                        <?php else: ?>
                         <tr>
                             <td colspan="4" class="px-6 py-4 text-center text-gray-500">Nenhum registro encontrado.</td>
                         </tr>
@@ -127,6 +127,9 @@ $registros_telefone = $stmtRegistros->fetchAll();
         </div>
     </div>
 </div>
+
+<!-- Componente de Paginação -->
+<?php require_once __DIR__ . '/../components/pagination_component.php'; ?>
 
 <?php
 // Captura o conteúdo do buffer e o armazena na variável $content

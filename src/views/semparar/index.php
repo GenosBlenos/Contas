@@ -111,6 +111,10 @@ $registros_semparar = $stmtRegistros->fetchAll();
         </div>
     </div>
 </div>
+
+<!-- Componente de Paginação -->
+<?php require_once __DIR__ . '/../components/pagination_component.php'; ?>
+
 <?php
 $content = ob_get_clean();
 require_once __DIR__ . '/../../includes/template.php';

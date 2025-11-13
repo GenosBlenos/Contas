@@ -115,6 +115,10 @@
         </div>
     </div>
 </div>
+
+<!-- Componente de Paginação -->
+<?php require_once __DIR__ . '/../components/pagination_component.php'; ?>
+
 <script>
     function excluirRegistro(id) {
         if (confirm('Tem certeza que deseja excluir este registro?')) {
@@ -146,4 +150,3 @@
         multa.addEventListener('input', calcularTotal);
     });
 </script>
-

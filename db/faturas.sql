@@ -10,7 +10,9 @@ CREATE TABLE agua (
     total_a_pagar DECIMAL(10, 2),
     arquivo_pdf VARCHAR(255) NULL,
     status VARCHAR(50) NOT NULL DEFAULT 'pendente',
-    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id)
+    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id),
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 -- CREATE TABLE internet (
@@ -32,7 +34,9 @@ CREATE TABLE semparar (
     total_a_pagar DECIMAL(10, 2),
     arquivo_pdf VARCHAR(255) NULL,
     status VARCHAR(50) NOT NULL DEFAULT 'pendente',    
-    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id)
+    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id),
+        criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 CREATE TABLE energia (
@@ -52,7 +56,9 @@ CREATE TABLE energia (
     imposto_retido_total DECIMAL(10, 2),
     imposto_retido_irrf DECIMAL(10, 2),
     valor_final DECIMAL(10, 2),
-    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id)
+    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id),
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 CREATE TABLE telefone (
@@ -65,5 +71,9 @@ CREATE TABLE telefone (
     valor_servico DECIMAL(10, 2),
     arquivo_pdf VARCHAR(255) NULL,
     status VARCHAR(50) NOT NULL DEFAULT 'pendente',
-    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id)
+    unidade_id INT FOREIGN KEY (unidade_id) REFERENCES unidades(id),
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+
