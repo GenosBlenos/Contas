@@ -8,7 +8,7 @@ $pageTitle = 'Cadastro de Fatura PDF';
 
 // Redireciona para a página de login se o usuário não estiver autenticado
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /Contas/login.php');
+    header('Location: /Contas/public/login.php');
     exit;
 }
 

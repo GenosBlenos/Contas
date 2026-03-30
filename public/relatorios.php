@@ -5,7 +5,7 @@ require_once __DIR__ . '/../src/includes/auth.php';
 require_once __DIR__ . '/../src/includes/header.php';
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /Contas/login.php');
+    header('Location: /Contas/public/login.php');
     exit;
 }
 require_once __DIR__ . '/../app/conexao.php';

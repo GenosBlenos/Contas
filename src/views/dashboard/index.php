@@ -13,7 +13,7 @@ require_once __DIR__ . '/../../includes/SecurityManager.php';
 $securityManager = SecurityManager::getInstance();
 
 if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-    header('Location: /Contas/login.php');
+    header('Location: /Contas/public/login.php');
     exit;
 }
 
@@ -354,18 +354,25 @@ if (isset($_GET['logout_admin'])) {
                 <h3 class="text-lg font-semibold text-gray-800">Energia Elétrica</h3>
             </a>
 
-            <!-- Card Sem Parar -->
+            <!-- Card Sem Parar
             <a href="semparar.php"
                 class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:shadow-xl transition-shadow duration-300">
                 <img src="../assets/car.png" alt="Sem Parar" class="w-18 h-16 mb-4">
                 <h3 class="text-lg font-semibold text-gray-800">Sem Parar</h3>
-            </a>
+            </a> -->
 
             <!-- Card Telefone -->
             <a href="telefone.php"
                 class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:shadow-xl transition-shadow duration-300">
                 <img src="../assets/phone.png" alt="Telefone" class="w-16 h-16 mb-4">
                 <h3 class="text-lg font-semibold text-gray-800">Telefonia Fixa</h3>
+            </a>
+
+            <!-- Card Faturas -->
+            <a href="faturas.php"
+                class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:shadow-xl transition-shadow duration-300">
+                <img src="../assets/invoice.png" alt="Faturas" class="w-16 h-16 mb-4">
+                <h3 class="text-lg font-semibold text-gray-800">Faturas</h3>
             </a>
 
             <!-- Card Relatórios -->

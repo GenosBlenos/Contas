@@ -3,11 +3,20 @@ require_once __DIR__ . '/../models/Documento.php';
 require_once __DIR__ . '/../includes/FileUpload.php';
 
 class DocumentosController {
-    public function index($module = null) {
+    public function index($module = null, $page = 1, $perPage = 15) {
         $model = new Documento();
         if ($module) {
-            return $model->findByModule($module);
+            $total = $model->countByModule($module);
+            $page = max(1, (int)$page);
+            $perPage = max(1, (int)$perPage);
+            $offset = ($page - 1) * $perPage;
+            $items = $model->findByModule($module, $perPage, $offset);
+            return [
+                'items' => $items,
+                'total' => $total
+            ];
         }
+        // fallback: return all documents when no module specified
         return $model->all();
     }
 

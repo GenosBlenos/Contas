@@ -23,7 +23,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
         sendJsonResponse(false, 'Acesso não autorizado. A sua sessão pode ter expirado.', 401);
     } else {
         // Comportamento padrão para páginas normais: redirecionar para o login
-        $loginPath = '/Contas/login.php';
+        $loginPath = '/Contas/public/login.php';
         header('Location: ' . $loginPath);
         exit;
     }

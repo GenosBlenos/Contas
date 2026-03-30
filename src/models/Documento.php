@@ -23,13 +23,41 @@ class Documento extends Model
         parent::__construct();
     }
 
-    public function findByModule($module)
-    {   
+    public function findByModule($module, $limit = null, $offset = null)
+    {
         $pdo = Database::getInstance()->getConnection();
-        $sql = "SELECT * FROM {$module} ORDER BY criado_em DESC";
+        // Some module tables don't have created timestamps; order by id
+        $sql = "SELECT * FROM {$module} ORDER BY id DESC";
+        if ($limit !== null) {
+            $sql .= " LIMIT :limit";
+            if ($offset !== null) {
+                $sql .= " OFFSET :offset";
+            }
+        }
+
         $stmt = $pdo->prepare($sql);
+        if ($limit !== null) {
+            $stmt->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+            if ($offset !== null) {
+                $stmt->bindValue(':offset', (int)$offset, PDO::PARAM_INT);
+            }
+        }
+
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Conta quantos registros existem em uma tabela de módulo
+     */
+    public function countByModule($module)
+    {
+        $pdo = Database::getInstance()->getConnection();
+        $sql = "SELECT COUNT(*) as cnt FROM {$module}";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return (int)($row['cnt'] ?? 0);
     }
 
     /**
@@ -37,7 +65,7 @@ class Documento extends Model
      */
     public function findByInstalacao($codigoInstalacao)
     {
-        $sql = "SELECT * FROM {$this->table} WHERE codigo_instalacao = ? ORDER BY criado_em DESC";
+        $sql = "SELECT * FROM {$this->table} WHERE codigo_instalacao = ? ORDER BY id DESC";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$codigoInstalacao]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -48,7 +76,7 @@ class Documento extends Model
      */
     public function findByPeriodo($mes, $ano)
     {
-        $sql = "SELECT * FROM {$this->table} WHERE mes_referencia = ? AND ano_referencia = ? ORDER BY criado_em DESC";
+        $sql = "SELECT * FROM {$this->table} WHERE mes_referencia = ? AND ano_referencia = ? ORDER BY id DESC";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$mes, $ano]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
